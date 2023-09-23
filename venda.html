@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -53,3 +54,60 @@ function calcularValorTotal() {
 
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora de Venda</title>
+</head>
+<body>
+
+<h1>Calculadora de Venda</h1>
+
+<div>
+  <label for="product1Name">Produto 1:</label>
+  <input type="text" id="product1Name" placeholder="Nome do Produto">
+  <input type="number" id="product1Value" placeholder="Valor do Produto">
+  <input type="number" id="product1Quantity" placeholder="Quantidade Vendida">
+</div>
+
+<div>
+  <label for="product2Name">Produto 2:</label>
+  <input type="text" id="product2Name" placeholder="Nome do Produto">
+  <input type="number" id="product2Value" placeholder="Valor do Produto">
+  <input type="number" id="product2Quantity" placeholder="Quantidade Vendida">
+</div>
+
+<div>
+  <label for="product3Name">Produto 3:</label>
+  <input type="text" id="product3Name" placeholder="Nome do Produto">
+  <input type="number" id="product3Value" placeholder="Valor do Produto">
+  <input type="number" id="product3Quantity" placeholder="Quantidade Vendida">
+</div>
+
+<br>
+
+<button onclick="calcularValorTotal()">Calcular Valor Total da Venda</button>
+
+<p id="result"></p>
+
+<script>
+function calcularValorTotal() {
+  const product1Value = parseFloat(document.getElementById("product1Value").value) || 0;
+  const product1Quantity = parseInt(document.getElementById("product1Quantity").value) || 0;
+
+  const product2Value = parseFloat(document.getElementById("product2Value").value) || 0;
+  const product2Quantity = parseInt(document.getElementById("product2Quantity").value) || 0;
+
+  const product3Value = parseFloat(document.getElementById("product3Value").value) || 0;
+  const product3Quantity = parseInt(document.getElementById("product3Quantity").value) || 0;
+
+  const totalValue = (product1Value * product1Quantity) + (product2Value * product2Quantity) + (product3Value * product3Quantity);
+
+  document.getElementById("result").innerHTML = `O valor total da venda é R$ ${totalValue.toFixed(2)}`;
+}
+</script>
+
+</body>
+</html>
+>>>>>>> 59aef0f6c0c1d279e96ded2e7cae8ab6f0bb720f
