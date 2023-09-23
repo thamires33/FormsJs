@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -54,8 +53,7 @@ function calcularValorTotal() {
 
 </body>
 </html>
-=======
-<!DOCTYPE html>
+
 <html>
 <head>
   <title>Calculadora de Venda</title>
@@ -110,4 +108,3 @@ function calcularValorTotal() {
 
 </body>
 </html>
->>>>>>> 59aef0f6c0c1d279e96ded2e7cae8ab6f0bb720f
