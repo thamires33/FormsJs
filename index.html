@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <title>Calculadoras</title>
+  <style>
+    /* Estilos CSS para os cards */
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 20px;
+      margin: 10px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+      float: left;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar a {
+      color: white;
+    }
+
+    /* Estilos para o texto do navbar */
+    .navbar-text {
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Calculadoras</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="piso.html">Calculadora de Piso</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="kms.html">Calculadora de Combustível</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="imc.html">Calculadora de Peso Ideal</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="amplitudes.html">Calculadora de Amplitudes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="venda.html">Calculadora de Vendas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pares.html">Calculadora de Valores Pares</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="temperatura.html">Calculadora de Temperatura</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+          <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <h1>Selecione uma Calculadora</h1>
+
+  <div class="card" onclick="window.location.href='piso.html'">
+    <h2>Calculadora de Piso</h2>
+    <img src="img/piso.jpeg" alt="Calculadora de Piso">
+    <p>Calcule o custo para assentar piso</p>
+  </div>
+
+  <div class="card" onclick="window.location.href='kms.html'">
+    <h2>Calculadora de Combustível</h2>
+    <img src="img/kms.jpeg" alt="Calculadora de Combustível">
+    <p>Calcule o gasto de combustível</p>
+  </div>
+
+  <div class="card" onclick="window.location.href='imc.html'">
+    <h2>Calculadora de IMC</h2>
+    <img src="img/imc.jpg" alt="Calculadora de IMC">
+    <p>Calcule o seu imc</p>
+  </div>
+
+  <div class="card" onclick="window.location.href='pares.html'">
+    <h2>Calculadora de Numeros Pares e Soma</h2>
+    <img src="img/pares.jpeg" alt="Calculadora de Numeros Pares">
+    <p>Calcule os pares </p>
+  </div>
+
+  <div class="card" onclick="window.location.href='temperatura.html'">
+    <h2>Calculadora de Temperatura ºC e ºF </h2>
+    <img src="img/temperatura.png" alt="Calculadora de Temperatura">
+    <p>Converta a temperatura </p>
+
+  </div>
+  <div class="card" onclick="window.location.href='venda.html'">
+    <h2>Calculadora de Vendas</h2>
+    <img src="img/vendas.png" alt="Calculadora de Vendas">
+    <p>Calcule as vendas </p>
+  </div>
+
+    </div>
+  <div class="card" onclick="window.location.href='amplitudes.html'">
+    <h2>Calculadora de Amplitudes</h2>
+    <img src="img/amplitude.png" alt="Calculadora de Amplitudes">
+    <p>Calcule as amplitudes </p>
+  </div>
+  <!-- Restante dos cards... -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+
+</html>

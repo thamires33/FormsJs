@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora de Custo de Assentamento de Piso</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+  <h1 class="text-center">Calculadora de Custo de Assentamento de Piso</h1>
+
+  <div class="form-group">
+    <label for="comprimento">Comprimento do cômodo (em metros):</label>
+    <input type="number" id="comprimento" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="largura">Largura do cômodo (em metros):</label>
+    <input type="number" id="largura" class="form-control">
+  </div>
+
+  <button class="btn btn-primary" onclick="calcularCustoAssentamento()">Calcular Custo de Assentamento</button>
+
+  <p id="result" class="mt-3"></p>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<script>
+function calcularCustoAssentamento() {
+  const comprimento = parseFloat(document.getElementById("comprimento").value) || 0;
+  const largura = parseFloat(document.getElementById("largura").value) || 0;
+
+  if (comprimento <= 0 || largura <= 0) {
+    alert("Por favor, insira valores válidos maiores que zero.");
+    return;
+  }
+
+  const precoPorMetroQuadrado = 36.00;
+  const area = comprimento * largura;
+  const custoTotal = area * precoPorMetroQuadrado;
+
+  document.getElementById("result").innerHTML = `O custo total para assentar o piso é R$ ${custoTotal.toFixed(2)}.`;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora de Peso Ideal</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    body {
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    #result {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1 class="mt-4">Calculadora de Peso Ideal</h1>
+
+  <div class="form-group">
+    <label for="altura">Altura (em cm):</label>
+    <input type="number" id="altura" class="form-control">
+  </div>
+
+  <div class="form-group">
+    <label for="sexo">Sexo:</label>
+    <select id="sexo" class="form-control">
+      <option value="homem">Homem</option>
+      <option value="mulher">Mulher</option>
+    </select>
+  </div>
+
+  <button class="btn btn-primary" onclick="calcularPesoIdeal()">Calcular Peso Ideal</button>
+
+  <p id="result"></p>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<script>
+function calcularPesoIdeal() {
+  const altura = parseFloat(document.getElementById("altura").value) || 0;
+  const sexo = document.getElementById("sexo").value;
+
+  if (altura <= 0) {
+    alert("Por favor, insira uma altura válida maior que zero.");
+    return;
+  }
+
+  let pesoIdeal;
+
+  if (sexo === "homem") {
+    pesoIdeal = (72.7 * altura / 100) - 58;
+  } else if (sexo === "mulher") {
+    pesoIdeal = (62.1 * altura / 100) - 44.7;
+  } else {
+    alert("Por favor, selecione um sexo válido.");
+    return;
+  }
+
+  document.getElementById("result").innerHTML = `O peso ideal é ${pesoIdeal.toFixed(2)} kg.`;
+}
+</script>
+
+</body>
+</html>
